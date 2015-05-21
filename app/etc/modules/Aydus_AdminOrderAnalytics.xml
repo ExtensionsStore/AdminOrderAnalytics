@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Aydus_AdminOrderAnalytics module
+ *
+ * @category   Aydus
+ * @package    Aydus_AdminOrderAnalytics
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_AdminOrderAnalytics>
+             <active>true</active>
+             <codePool>community</codePool>
+        </Aydus_AdminOrderAnalytics>
+    </modules>
+</config>

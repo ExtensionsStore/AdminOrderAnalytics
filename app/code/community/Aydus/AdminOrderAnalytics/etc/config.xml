@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Aydus_AdminOrderAnalytics config
+ *
+ * @category   Aydus
+ * @package    Aydus_AdminOrderAnalytics
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_AdminOrderAnalytics>
+            <version>0.1.0</version>
+        </Aydus_AdminOrderAnalytics>
+    </modules>
+    <phpunit>
+        <suite>
+            <modules>
+                <Aydus_AdminOrderAnalytics />
+            </modules>
+        </suite>
+    </phpunit>    
+    <adminhtml>
+        <events>
+			<sales_order_place_after>
+                <observers>
+                    <aydus_adminorderanalytics>
+                        <class>aydus_adminorderanalytics/observer</class>
+                        <method>salesOrderPlaceAfter</method>
+                    </aydus_adminorderanalytics>
+                </observers>			
+			</sales_order_place_after>
+        </events>
+        <layout>
+            <updates>
+                <aydus_adminorderanalytics>
+                    <file>aydus/adminorderanalytics.xml</file>
+                </aydus_adminorderanalytics>
+            </updates>
+        </layout> 
+    </adminhtml>  
+    <global>    
+    	<blocks>
+            <aydus_adminorderanalytics>
+                <class>Aydus_AdminOrderAnalytics_Block</class>
+            </aydus_adminorderanalytics>        
+    	</blocks>
+    	<helpers>
+            <aydus_adminorderanalytics>
+                <class>Aydus_AdminOrderAnalytics_Helper</class>
+            </aydus_adminorderanalytics>        
+    	</helpers>    
+        <models>
+            <aydus_adminorderanalytics>
+                <class>Aydus_AdminOrderAnalytics_Model</class>
+            </aydus_adminorderanalytics>        
+        </models>             
+    </global>       
+    <default>
+	    <google>
+	    	<analytics>
+		    	<track_admin_orders>1</track_admin_orders>
+		    </analytics>
+		</google>
+    </default>  
+</config>

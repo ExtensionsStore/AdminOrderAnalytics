@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Aydus_AdminOrderAnalytics layout
+ *
+ * @category   Aydus
+ * @package    Aydus_AdminOrderAnalytics
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="content">
+            <block type="aydus_adminorderanalytics/adminhtml_order" name="adminorderanalytics" template="aydus/adminorderanalytics/order.phtml" />
+        </reference>
+    </adminhtml_sales_order_view>
+</layout>

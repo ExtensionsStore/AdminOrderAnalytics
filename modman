@@ -1,0 +1,4 @@
+app/code/community/Aydus/AdminOrderAnalytics/                                    app/code/community/Aydus/AdminOrderAnalytics/
+app/design/adminhtml/default/default/layout/aydus/adminorderanalytics.xml        app/design/adminhtml/default/default/layout/aydus/adminorderanalytics.xml
+app/design/adminhtml/default/default/template/aydus/adminorderanalytics/         app/design/adminhtml/default/default/template/aydus/adminorderanalytics
+app/etc/modules/Aydus_AdminOrderAnalytics.xml                                    app/etc/modules/Aydus_AdminOrderAnalytics.xml
