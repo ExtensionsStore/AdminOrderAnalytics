@@ -20,7 +20,28 @@ class Aydus_AdminOrderAnalytics_Test_Model_Observer extends EcomDev_PHPUnit_Test
     {
         echo "\nStarting Aydus_AdminOrderAnalytics model test.";
                 
-        $this->assertTrue(true);
+        $adminhtmlSession = $this->getModelMockBuilder('adminhtml/session')
+                ->disableOriginalConstructor()
+                ->setMethods(null)
+                ->getMock();
+    
+        $this->replaceByMock('singleton', 'adminhtml/session', $adminhtmlSession);        
+        
+        $order = Mage::getModel('sales/order');
+        $order->load(1);
+        $observer = new Varien_Event_Observer();
+        $event = new Varien_Event();
+        $observer->setEvent($event);    
+        $event->setOrder($order);
+        $observer->setOrder($order);
+        
+        $model = Mage::getModel('aydus_adminorderanalytics/observer');
+        
+        $observer = $model->salesOrderPlaceAfter($observer);
+        
+        $adminOrderPlaced = (bool)Mage::getSingleton('adminhtml/session')->getAdminOrderPlaced();
+        
+        $this->assertTrue($adminOrderPlaced);
         
         echo "\nCompleted Aydus_AdminOrderAnalytics model test.";
         

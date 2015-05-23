@@ -26,7 +26,8 @@ class Aydus_AdminOrderAnalytics_Model_Observer
         
         if ($trackAdminOrders){
             
-            Mage::getSingleton('adminhtml/session')->setAdminOrderPlaced(true);
+            $adminhtmlSession = Mage::getSingleton('adminhtml/session');
+            $adminhtmlSession->setAdminOrderPlaced(true);
             $observer->setAdminOrderPlaced(true);
             
         }

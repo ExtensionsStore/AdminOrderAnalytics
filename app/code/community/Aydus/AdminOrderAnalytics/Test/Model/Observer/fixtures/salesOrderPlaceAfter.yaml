@@ -1,7 +1,10 @@
+config:
+    default/google/analytics/track_admin_orders: 1
 tables:
-  admin/user:
-    - user_id: 1
-      firstname: David
-      lastname: Tay
-      username: davidt@aydus.com
-      email: davidt@aydus.com
+  sales/order:
+    - entity_id: 1
+      increment_id: 10000001
+      store_id: 1
+  sales/order_item:
+    - item_id: 1
+      order_id: 1
