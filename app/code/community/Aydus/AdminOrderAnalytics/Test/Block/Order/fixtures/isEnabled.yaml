@@ -1,0 +1,51 @@
+config:
+    default/google/analytics/track_admin_orders: 1
+tables:
+  admin/user:
+    - user_id: 1
+      firstname: David
+      lastname: Tay
+      username: davidt@aydus.com
+      email: davidt@aydus.com
+  admin/role:
+    - role_id: 1
+      parent_id: 0
+      tree_level: 1
+      sort_order: 1
+      role_type: G
+      user_id: 0
+      role_name: Administrators
+    - role_id: 2
+      parent_id: 1
+      tree_level: 2
+      sort_order: 0
+      role_type: U
+      user_id: 1
+      role_name: David
+      gws_is_all: 1        
+  admin/rule:
+    - rule_id: 1
+      role_id: 1
+      resource_id: all
+      assert_id: 0
+      role_type: G
+      permission: allow  
+  sales/order:
+    - entity_id: 1
+      increment_id: 10000001
+      store_id: 1
+      state: processing
+      status: processing
+      created_at: 2015-05-22 12:00:00
+      updated_at: 2015-05-22 12:00:01
+  sales/order_address:
+    - entity_id: 1
+      parent_id: 1
+      address_type: billing
+    - entity_id: 2
+      parent_id: 1
+      address_type: shipping      
+  sales/order_payment:
+    - entity_id: 1
+      parent_id: 1
+      method: checkmo
