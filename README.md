@@ -1,7 +1,7 @@
 Admin Order Analytics
 =====================
 
-Send ecommerce tracking information to Google Analytics for orders created
+Send eCommerce tracking information to Google Analytics for orders created
 in the Magento admin.
 
 Description
